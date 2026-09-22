@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-login',
-  imports: [FormsModule, RouterLink],
+  imports: [FormsModule],
   templateUrl: './login.html',
   styleUrl: './login.css',
 })
@@ -14,8 +13,6 @@ export class Login {
   lembrar = false;
   mensagem = '';
   tentou = false;
-
-  constructor(private router: Router) {}
 
   entrar(formularioValido: boolean | null) {
     this.tentou = true;
@@ -31,7 +28,7 @@ export class Login {
       if (usuarios[i].email == this.email && usuarios[i].senha == this.senha) {
         localStorage.setItem('usuarioLogado', JSON.stringify(usuarios[i]));
         alert('Bem-vindo, ' + usuarios[i].nome + '!');
-        this.router.navigate(['/']);
+        window.location.href = '/';
         return;
       }
     }

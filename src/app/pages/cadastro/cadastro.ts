@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-cadastro',
-  imports: [FormsModule, RouterLink],
+  imports: [FormsModule],
   templateUrl: './cadastro.html',
   styleUrl: './cadastro.css',
 })
@@ -17,8 +16,6 @@ export class Cadastro {
   endereco = '';
   mensagem = '';
   tentou = false;
-
-  constructor(private router: Router) {}
 
   cadastrar(formularioValido: boolean | null) {
     this.tentou = true;
@@ -48,6 +45,6 @@ export class Cadastro {
     localStorage.setItem('usuarios', JSON.stringify(usuarios));
 
     alert('Cadastro realizado com sucesso!');
-    this.router.navigate(['/login']);
+    window.location.href = 'login';
   }
 }
