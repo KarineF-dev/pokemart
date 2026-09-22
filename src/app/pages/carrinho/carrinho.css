@@ -1,0 +1,11 @@
+.titulo { font-weight: 900; font-size: 1.8rem; }
+
+.miniatura {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 10px;
+  background: #1c2130;
+}
+
+.total { font-size: 1.3rem; font-weight: 900; color: var(--pk-vermelho); }

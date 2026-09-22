@@ -1,0 +1,9 @@
+.card-cat {
+  border-radius: 14px;
+  color: var(--pk-escuro);
+  transition: transform .2s;
+}
+.card-cat:hover { transform: translateY(-4px); }
+.card-cat img { width: 72px; height: 72px; }
+.card-cat h6 { font-size: .85rem; }
+.card-cat small { font-size: .7rem; }

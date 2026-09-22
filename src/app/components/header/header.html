@@ -1,0 +1,57 @@
+<header [class.sobre-hero]="naHome()">
+  <div class="topo py-2">
+    <div class="container d-flex align-items-center gap-4">
+      <a href="/" class="logo">
+        <span class="pokebola"></span>
+        <span>
+          <strong>Poké<span>Mart</span></strong>
+         <small class="d-none d-sm-block">Tudo para a sua próxima aventura!</small>
+        </span>
+      </a>
+
+      <form class="busca flex-grow-1 d-none d-md-flex" action="resultado-busca" method="get">
+  <input class="form-control" type="search" name="busca" [value]="buscaAtual()"
+         placeholder="Busque por produtos, poções, itens...">
+  <button class="btn btn-pk" type="submit"><i class="bi bi-search"></i></button>
+</form>
+
+     <nav class="atalhos d-flex gap-3 ms-auto">
+  <a href="login">
+    <i class="bi bi-person"></i>
+    <span class="d-none d-lg-inline">Entrar<br><small>Minha conta</small></span>
+  </a>
+  <a href="#">
+    <i class="bi bi-heart"></i>
+    <span class="d-none d-lg-inline">Favoritos</span>
+  </a>
+  <a href="carrinho">
+    <i class="bi bi-cart3"></i>
+    <span class="d-none d-lg-inline">Carrinho</span>
+  </a>
+</nav>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg navbar-dark menu py-0">
+    <div class="container">
+      <a href="vitrine" class="btn categorias-btn">
+        <i class="bi bi-list me-2"></i>Todas as Categorias
+      </a>
+      <button class="navbar-toggler my-2" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/" [class.active]="naHome()">Início</a>
+          </li>
+          @for (cat of categorias; track cat) {
+            <li class="nav-item">
+              <a class="nav-link" href="vitrine?categoria={{ cat }}" [class.active]="categoriaAtual() == cat">{{ cat }}</a>
+            </li>
+          }
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

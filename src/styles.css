@@ -1,1 +1,97 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --pk-vermelho: #e3262f;
+  --pk-vermelho-escuro: #b81d25;
+  --pk-amarelo: #ffcb05;
+  --pk-escuro: #1c2130;
+  --pk-texto: #2b2f3a;
+  --pk-cinza: #6c7280;
+}
+
+body {
+  font-family: 'Poppins', system-ui, sans-serif;
+  color: var(--pk-texto);
+}
+
+.btn-pk {
+  background: var(--pk-vermelho);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+}
+.btn-pk:hover { background: var(--pk-vermelho-escuro); color: #fff; }
+
+.sprite { image-rendering: pixelated; }
+
+.titulo-secao {
+  font-weight: 800;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  margin: 0;
+}
+/* ===== Telas de login e cadastro ===== */
+.auth-fundo {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  min-height: calc(100vh - 120px);
+  display: flex;
+  align-items: center;
+}
+.auth-fundo::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(16, 25, 43, .6), rgba(16, 25, 43, .1));
+}
+
+.auth-card {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  background: rgba(16, 22, 38, .92);
+  border: 1px solid rgba(255, 255, 255, .12);
+  border-radius: 18px;
+  color: #fff;
+}
+
+.auth-logo { display: flex; align-items: center; gap: .6rem; margin-bottom: 1.2rem; }
+.auth-logo strong { font-size: 1.7rem; font-weight: 900; color: var(--pk-vermelho); }
+.auth-logo strong span { color: var(--pk-amarelo); }
+.auth-pokebola {
+  width: 42px; height: 42px; border-radius: 50%; position: relative;
+  border: 3px solid #fff;
+  background: linear-gradient(var(--pk-vermelho) 0 44%, #1c2130 44% 56%, #fff 56%);
+}
+.auth-pokebola::after {
+  content: ''; position: absolute; top: 50%; left: 50%;
+  width: 13px; height: 13px; transform: translate(-50%, -50%);
+  background: #fff; border: 3px solid #1c2130; border-radius: 50%;
+}
+
+.auth-card h1 { font-weight: 800; font-size: 1.8rem; line-height: 1.2; }
+.auth-card h1 span { display: block; color: var(--pk-amarelo); }
+.auth-card .form-label { font-weight: 600; font-size: .85rem; }
+
+.auth-card .form-control,
+.auth-card .input-group-text {
+  background: rgba(255, 255, 255, .06);
+  border-color: rgba(255, 255, 255, .18);
+  color: #fff;
+}
+.auth-card .input-group-text { color: #cfd3dc; }
+.auth-card .form-control::placeholder { color: #9aa1b2; }
+.auth-card .form-control:focus {
+  background: rgba(255, 255, 255, .1);
+  color: #fff;
+  border-color: var(--pk-amarelo);
+  box-shadow: none;
+}
+
+.auth-ou { display: flex; align-items: center; gap: .8rem; color: #9aa1b2; font-size: .85rem; }
+.auth-ou::before, .auth-ou::after { content: ''; flex: 1; height: 1px; background: rgba(255, 255, 255, .18); }
+
+.btn-social { border: 1px solid rgba(255, 255, 255, .2); color: #fff; font-size: .9rem; }
+.btn-social:hover { background: rgba(255, 255, 255, .08); color: #fff; }

@@ -1,0 +1,20 @@
+footer { background: var(--pk-escuro); color: #fff; }
+
+.logo { display: flex; align-items: center; gap: .5rem; text-decoration: none; margin-bottom: .3rem; }
+.logo strong { font-size: 1.6rem; font-weight: 900; color: var(--pk-vermelho); }
+.logo strong span { color: var(--pk-amarelo); }
+
+.pokebola {
+  width: 34px; height: 34px; border-radius: 50%; border: 3px solid #fff;
+  background: linear-gradient(var(--pk-vermelho) 45%, #fff 45%);
+}
+
+small { color: #aab0bf; font-size: .75rem; }
+h4 { font-size: .85rem; font-weight: 700; }
+
+ul { list-style: none; padding: 0; margin: 0; }
+li a { color: #cfd3dc; text-decoration: none; font-size: .78rem; line-height: 1.9; }
+li a:hover { color: var(--pk-amarelo); }
+
+.base { border-top: 1px solid rgba(255, 255, 255, .1); }
+.base a { color: #fff; font-size: 1.1rem; }

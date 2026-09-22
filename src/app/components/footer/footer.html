@@ -1,0 +1,49 @@
+<footer>
+  <div class="container py-5">
+    <div class="row g-4">
+      <div class="col-lg-3">
+        <a routerLink="/" class="logo">
+          <span class="pokebola"></span>
+          <strong>Poké<span>Mart</span></strong>
+        </a>
+        <small>Tudo para a sua próxima aventura!</small>
+      </div>
+
+      <div class="col-6 col-lg-2">
+        <h4>Categorias</h4>
+        <ul>
+          @for (c of categorias; track c) {
+            <li><a href="vitrine?categoria={{ c }}">{{ c }}</a></li>
+          }
+        </ul>
+      </div>
+
+      <div class="col-6 col-lg-3">
+        <h4>Atendimento</h4>
+        <ul>
+          @for (a of atendimento; track a) {
+            <li><a href="#">{{ a }}</a></li>
+          }
+        </ul>
+      </div>
+
+      <div class="col-lg-4">
+        <h4>Receba novidades e ofertas exclusivas!</h4>
+        <form class="d-flex gap-2 mt-3">
+          <input type="email" class="form-control" placeholder="Seu e-mail">
+          <button class="btn btn-pk text-nowrap" type="submit">Inscrever-se</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="base">
+    <div class="container d-flex justify-content-between align-items-center py-3">
+      <div class="d-flex gap-3">
+        @for (r of redes; track r) {
+          <a href="#"><i [class]="'bi ' + r"></i></a>
+        }
+      </div>
+    </div>
+  </div>
+</footer>

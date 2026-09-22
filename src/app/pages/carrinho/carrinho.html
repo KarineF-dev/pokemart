@@ -1,0 +1,67 @@
+<section class="container py-5">
+  <h1 class="titulo mb-4"><i class="bi bi-cart3 me-2"></i>Cesta de compras</h1>
+
+  @if (cesta.vazia()) {
+    <div class="alert alert-warning">
+      Sua cesta está vazia. Volte à <a href="vitrine" class="alert-link">vitrine</a> para escolher seus itens.
+    </div>
+  } @else {
+    <div class="table-responsive">
+      <table class="table table-hover align-middle">
+        <thead class="table-dark">
+          <tr>
+            <th>Produto</th>
+            <th class="text-center">Quantidade</th>
+            <th class="text-end">Valor unitário</th>
+            <th class="text-end">Subtotal</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (item of cesta.itens; track item.produto.codigo) {
+            <tr>
+              <td>
+                <div class="d-flex align-items-center gap-3">
+                  <img src="imagens/produtos/{{ item.produto.codigo }}.jpg" class="miniatura" [alt]="item.produto.nome">
+                  <div>
+                    <strong>{{ item.produto.nome }}</strong><br>
+                    <small class="text-muted">{{ item.produto.categoria }}</small>
+                  </div>
+                </div>
+              </td>
+              <td class="text-center">
+                <div class="btn-group btn-group-sm">
+                  <button class="btn btn-outline-secondary" (click)="cesta.diminuir(item)">-</button>
+                  <span class="btn btn-light disabled">{{ item.quantidade }}</span>
+                  <button class="btn btn-outline-secondary" (click)="cesta.aumentar(item)">+</button>
+                </div>
+              </td>
+              <td class="text-end">R$ {{ item.produto.valorPromo | number: '1.2-2' }}</td>
+              <td class="text-end fw-bold">R$ {{ cesta.subtotal(item) | number: '1.2-2' }}</td>
+              <td class="text-end">
+                <button class="btn btn-sm btn-outline-danger" (click)="cesta.remover(item)">
+                  <i class="bi bi-trash"></i>
+                </button>
+              </td>
+            </tr>
+          }
+        </tbody>
+        <tfoot class="table-group-divider">
+          <tr>
+            <td colspan="3" class="text-end fw-bold">Total ({{ cesta.quantidadeTotal() }} itens)</td>
+            <td class="text-end total">R$ {{ cesta.total() | number: '1.2-2' }}</td>
+            <td></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <div class="d-flex justify-content-between">
+      <button class="btn btn-outline-danger" (click)="cesta.limpar()">Esvaziar cesta</button>
+      <div class="d-flex gap-2">
+        <a href="vitrine" class="btn btn-outline-secondary">Continuar comprando</a>
+        <button class="btn btn-danger" (click)="finalizar()">Finalizar pedido</button>
+      </div>
+    </div>
+  }
+</section>

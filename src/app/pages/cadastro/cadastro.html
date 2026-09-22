@@ -1,0 +1,94 @@
+<section class="auth-fundo" style="background-image: url('imagens/Pokemart_imagem.jpg')">
+  <div class="container py-5 d-flex justify-content-center justify-content-lg-start">
+    <div class="auth-card p-4 p-md-5" style="max-width: 580px;">
+
+      <div class="auth-logo">
+        <span class="auth-pokebola"></span>
+        <strong>Poké<span>Mart</span></strong>
+      </div>
+
+      <h1>Crie sua conta, <span>treinador(a)!</span></h1>
+      <p class="text-white-50 small mb-4">Cadastre-se e comece sua jornada no PokéMart.</p>
+
+      @if (mensagem != '') {
+        <div class="alert alert-danger py-2 small">{{ mensagem }}</div>
+      }
+
+      <form #form="ngForm" (ngSubmit)="cadastrar(form.valid)" [class.was-validated]="tentou">
+
+        <div class="mb-3">
+          <label for="txtNome" class="form-label">Nome completo</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text"><i class="bi bi-person"></i></span>
+            <input type="text" id="txtNome" name="nome" class="form-control"
+                   placeholder="Digite seu nome" [(ngModel)]="nome" required>
+            <div class="invalid-feedback">Nome completo obrigatório!</div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="txtEmail" class="form-label">E-mail</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+            <input type="email" id="txtEmail" name="email" class="form-control"
+                   placeholder="Digite seu e-mail" [(ngModel)]="email" required email>
+            <div class="invalid-feedback">Informe um e-mail válido!</div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="txtSenha" class="form-label">Senha</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text"><i class="bi bi-lock"></i></span>
+            <input type="password" id="txtSenha" name="senha" class="form-control"
+                   placeholder="Crie uma senha forte" [(ngModel)]="senha" required
+                   pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$">
+            <div class="invalid-feedback">
+              A senha deve ter pelo menos 8 caracteres, com uma letra maiúscula, uma minúscula, um número e um caractere especial.
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="txtDocumento" class="form-label">Documento (CPF)</label>
+            <div class="input-group has-validation">
+              <span class="input-group-text"><i class="bi bi-person-vcard"></i></span>
+              <input type="text" id="txtDocumento" name="documento" class="form-control"
+                     placeholder="000.000.000-00" [(ngModel)]="documento" required>
+              <div class="invalid-feedback">Documento obrigatório!</div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label for="txtTelefone" class="form-label">Telefone</label>
+            <div class="input-group has-validation">
+              <span class="input-group-text"><i class="bi bi-telephone"></i></span>
+              <input type="tel" id="txtTelefone" name="telefone" class="form-control"
+                     placeholder="(11) 90000-0000" [(ngModel)]="telefone" required>
+              <div class="invalid-feedback">Telefone obrigatório!</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <label for="txtEndereco" class="form-label">Endereço</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text"><i class="bi bi-geo-alt"></i></span>
+            <textarea id="txtEndereco" name="endereco" class="form-control" rows="3"
+                      placeholder="Rua, número, bairro, cidade" [(ngModel)]="endereco" required></textarea>
+            <div class="invalid-feedback">Informe o seu endereço completo!</div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-danger w-100 py-2 fw-semibold">
+          Criar conta <i class="bi bi-arrow-right ms-1"></i>
+        </button>
+      </form>
+
+      <p class="text-center small mt-4 mb-0">
+        Já tem uma conta? <a routerLink="/login" class="link-danger fw-semibold">Entrar</a>
+      </p>
+    </div>
+  </div>
+</section>

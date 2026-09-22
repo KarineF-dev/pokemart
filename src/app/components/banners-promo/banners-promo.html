@@ -1,0 +1,23 @@
+<section class="container pb-4">
+  <div class="row g-3">
+    @for (b of banners; track b.titulo) {
+      <div class="col-lg-6">
+        <div class="banner" [style.background]="b.fundo">
+          <div class="info">
+            <h2><span class="bolinha"></span>{{ b.titulo }}</h2>
+            <strong>{{ b.sub }}</strong>
+            <p>{{ b.texto }}</p>
+            <a routerLink="/vitrine" [queryParams]="{ categoria: b.categoria }" class="btn btn-light btn-sm fw-semibold px-3">
+              Ver todas <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+          <div class="itens">
+            @for (img of b.imgs; track img) {
+              <img [src]="img" alt="" class="sprite">
+            }
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</section>

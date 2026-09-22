@@ -1,0 +1,61 @@
+<section class="container py-5">
+  @if (encontrado) {
+    <div class="row g-4 align-items-center">
+      <div class="col-md-5">
+        <div class="area-img">
+          <span class="pokebola"></span>
+          <img src="imagens/produtos/{{ produto.codigo }}.jpg" [alt]="produto.nome"
+               (error)="$any($event.target).style.display = 'none'">
+        </div>
+      </div>
+
+      <div class="col-md-7">
+        <small class="text-secondary">{{ produto.categoria }}</small>
+        <h1 class="fw-bold">{{ produto.nome }}</h1>
+
+        <div class="d-flex gap-2 mb-3">
+          @if (produto.destaque == 1) {
+            <span class="badge text-bg-warning">Oferta</span>
+          }
+          @if (produto.quantidade > 0) {
+            <span class="badge text-bg-success">{{ produto.quantidade }} em estoque</span>
+          } @else {
+            <span class="badge text-bg-danger">Esgotado</span>
+          }
+        </div>
+
+        <p class="text-secondary">{{ produto.descritivo }}</p>
+
+        <p class="text-muted text-decoration-line-through mb-0">De R$ {{ produto.valor | number: '1.2-2' }}</p>
+        <p class="preco mb-1">R$ {{ produto.valorPromo | number: '1.2-2' }}</p>
+        <p class="text-success fw-semibold">Você economiza R$ {{ economia() | number: '1.2-2' }}</p>
+
+        <div class="input-group mb-3 quantidade">
+          <span class="input-group-text">Quantidade</span>
+          <input type="number" class="form-control" min="1" [max]="produto.quantidade"
+                 name="quantidade" [(ngModel)]="quantidade">
+        </div>
+
+        <div class="d-flex gap-2">
+          <button class="btn btn-danger btn-lg" (click)="comprar()" [disabled]="produto.quantidade == 0">
+            <i class="bi bi-cart-plus me-1"></i>Adicionar à cesta
+          </button>
+          <a href="vitrine?categoria={{ produto.categoria }}" class="btn btn-outline-secondary btn-lg">Voltar</a>
+        </div>
+
+        @if (mensagem != '') {
+          <div class="alert alert-success mt-3 d-flex justify-content-between align-items-center">
+            <span>{{ mensagem }}</span>
+            <a href="carrinho" class="btn btn-success btn-sm">Ver cesta</a>
+          </div>
+        }
+      </div>
+    </div>
+  } @else {
+    <div class="text-center py-5">
+      <i class="bi bi-emoji-frown fs-1 d-block mb-2 text-secondary"></i>
+      <p class="text-secondary">Produto não encontrado.</p>
+      <a href="vitrine" class="btn btn-danger">Voltar para a vitrine</a>
+    </div>
+  }
+</section>

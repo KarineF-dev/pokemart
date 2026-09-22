@@ -1,0 +1,8 @@
+.destaque { border-radius: 20px; transition: transform .25s; }
+.destaque:hover { transform: translateY(-4px); }
+
+.area-foto { background: #1c2130; min-height: 280px; }
+.area-foto img { position: absolute; inset: 0; transition: transform .4s; }
+.destaque:hover .area-foto img { transform: scale(1.06); }
+
+.preco { font-size: 1.6rem; font-weight: 900; color: var(--pk-vermelho); }

@@ -1,0 +1,64 @@
+<section class="auth-fundo" style="background-image: url('imagens/Pokemart_imagem.jpg')">
+  <div class="container py-5 d-flex justify-content-center justify-content-lg-start">
+    <div class="auth-card p-4 p-md-5">
+
+      <div class="auth-logo">
+        <span class="auth-pokebola"></span>
+        <strong>Poké<span>Mart</span></strong>
+      </div>
+
+      <h1>Bem-vindo de volta, <span>treinador(a)!</span></h1>
+      <p class="text-white-50 small mb-4">Faça login na sua conta para continuar sua jornada no PokéMart.</p>
+
+      @if (mensagem != '') {
+        <div class="alert alert-danger py-2 small">{{ mensagem }}</div>
+      }
+
+      <form #form="ngForm" (ngSubmit)="entrar(form.valid)" [class.was-validated]="tentou">
+
+        <div class="mb-3">
+          <label for="txtEmail" class="form-label">E-mail</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+            <input type="email" id="txtEmail" name="email" class="form-control"
+                   placeholder="Digite seu e-mail" [(ngModel)]="email" required email>
+            <div class="invalid-feedback">Informe um e-mail válido!</div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="txtSenha" class="form-label">Senha</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text"><i class="bi bi-lock"></i></span>
+            <input type="password" id="txtSenha" name="senha" class="form-control"
+                   placeholder="Digite sua senha" [(ngModel)]="senha" required>
+            <div class="invalid-feedback">Senha obrigatória!</div>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center mb-4 small">
+          <div class="form-check">
+            <input type="checkbox" id="lembrar" name="lembrar" class="form-check-input" [(ngModel)]="lembrar">
+            <label for="lembrar" class="form-check-label">Lembrar de mim</label>
+          </div>
+          <a href="#" class="link-warning">Esqueceu sua senha?</a>
+        </div>
+
+        <button type="submit" class="btn btn-danger w-100 py-2 fw-semibold">
+          Entrar <i class="bi bi-arrow-right ms-1"></i>
+        </button>
+      </form>
+
+      <div class="auth-ou my-4">ou</div>
+
+      <div class="d-grid gap-2">
+        <button type="button" class="btn btn-social"><i class="bi bi-google me-2"></i>Entrar com Google</button>
+        <button type="button" class="btn btn-social"><i class="bi bi-discord me-2"></i>Entrar com Discord</button>
+      </div>
+
+      <p class="text-center small mt-4 mb-0">
+        Não tem uma conta? <a routerLink="/cadastro" class="link-danger fw-semibold">Cadastre-se</a>
+      </p>
+    </div>
+  </div>
+</section>
