@@ -29,7 +29,7 @@ export const LISTA_PRODUTOS: Produto[] = [
   // ===== Equipamentos =====
 
   { codigo: 22, nome: 'Mochila de Treinador', descritivo: 'Espaço para itens, pokébolas e tudo que a jornada pedir.', categoria: 'Equipamentos', valor: 119.90, valorPromo: 99.90, quantidade: 20, destaque: 1 },
-  { codigo: 23, nome: 'Bicicleta', descritivo: 'Dobrável e resistente. Chegue mais rápido ao próximo ginásio.', categoria: 'Equipamentos', valor: 299.90, valorPromo: 259.90, quantidade: 5, destaque: 0 },
+  { codigo: 23, nome: 'Bicicleta', descritivo: 'Dobrável e resistente. Chegue mais rápido ao próximo ginásio.', categoria: 'Equipamentos', valor: 799.90, valorPromo: 459.90, quantidade: 5, destaque: 0 },
   { codigo: 24, nome: 'Vara Velha', descritivo: 'Vara de pesca simples para fisgar Pokémon aquáticos.', categoria: 'Equipamentos', valor: 29.90, valorPromo: 24.90, quantidade: 40, destaque: 0 },
   { codigo: 25, nome: 'Vara Boa', descritivo: 'Vara de pesca melhor, que alcança Pokémon mais fortes.', categoria: 'Equipamentos', valor: 59.90, valorPromo: 49.90, quantidade: 20, destaque: 0 },
   { codigo: 26, nome: 'Super Vara', descritivo: 'A melhor vara de pesca para Pokémon raros.', categoria: 'Equipamentos', valor: 99.90, valorPromo: 89.90, quantidade: 8, destaque: 1 },
@@ -67,7 +67,7 @@ export const LISTA_PRODUTOS: Produto[] = [
   { codigo: 52, nome: 'Bala Rara', descritivo: 'Doce raro que faz o Pokémon subir um nível.', categoria: 'Alimentos', valor: 49.90, valorPromo: 42.90, quantidade: 12, destaque: 1 },
 
   // ===== EvolutionStone =====
-  
+
   { codigo: 53, nome: 'Pedra do Fogo', descritivo: 'Faz certos Pokémon evoluírem, como Vulpix e Eevee.', categoria: 'EvolutionStone', valor: 39.90, valorPromo: 34.90, quantidade: 15, destaque: 1 },
   { codigo: 54, nome: 'Pedra da Água', descritivo: 'Desperta a evolução de Pokémon como Staryu e Eevee.', categoria: 'EvolutionStone', valor: 39.90, valorPromo: 34.90, quantidade: 15, destaque: 0 },
   { codigo: 55, nome: 'Pedra do Trovão', descritivo: 'Faz Pikachu, Eevee e outros evoluírem.', categoria: 'EvolutionStone', valor: 39.90, valorPromo: 34.90, quantidade: 18, destaque: 1 },

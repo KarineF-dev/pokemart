@@ -5,9 +5,17 @@ footer { background: var(--pk-escuro); color: #fff; }
 .logo strong span { color: var(--pk-amarelo); }
 
 .pokebola {
-  width: 34px; height: 34px; border-radius: 50%; border: 3px solid #fff;
-  background: linear-gradient(var(--pk-vermelho) 45%, #fff 45%);
+  width: 34px; height: 34px; border-radius: 50%; flex-shrink: 0; position: relative;
+  border: 3px solid #fff;
+  background: linear-gradient(var(--pk-vermelho) 0 44%, #fff 44% 56%, #f1f1f1 56%);
 }
+.pokebola::after {
+  content: ''; position: absolute; top: 50%; left: 50%;
+  width: 11px; height: 11px; transform: translate(-50%, -50%);
+  background: #fff; border: 3px solid var(--pk-escuro); border-radius: 50%;
+}
+
+.logo strong span { -webkit-text-stroke: 1px #3b4cca; }
 
 small { color: #aab0bf; font-size: .75rem; }
 h4 { font-size: .85rem; font-weight: 700; }
