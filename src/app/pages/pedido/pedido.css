@@ -1,0 +1,13 @@
+.titulo { font-weight: 900; font-size: 1.8rem; }
+
+.form-check:has(.form-check-input:checked) {
+  border-color: var(--pk-vermelho) !important;
+  background: rgba(227, 38, 47, .05);
+}
+
+.total { font-size: 1.6rem; font-weight: 900; color: var(--pk-vermelho); }
+
+.sucesso { font-size: 5rem; color: #198754; }
+
+.caixa-numero { max-width: 320px; border-radius: 16px; }
+.numero { font-size: 2rem; font-weight: 900; color: var(--pk-vermelho); }

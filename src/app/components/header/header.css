@@ -51,5 +51,15 @@ body { overflow-x: hidden; }
     padding: 0 12px .5rem;
     border-radius: 0 0 14px 14px;
     box-shadow: 0 12px 24px rgba(0, 0, 0, .35);
+
+    .atalhos .dropdown > a { display: flex; align-items: center; gap: .4rem; color: #fff; font-size: .8rem; line-height: 1.1; }
+.atalhos .dropdown > a small { color: #cfd3dc; }
+
+.badge-carrinho {
+  position: absolute;
+  top: -6px;
+  left: 14px;
+  font-size: .65rem;
+}
   }
 }

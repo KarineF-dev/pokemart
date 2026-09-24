@@ -1,0 +1,120 @@
+<section class="container py-5">
+
+  @if (!concluido) {
+    <h1 class="titulo mb-4"><i class="bi bi-bag-check me-2"></i>Finalizar pedido</h1>
+
+    <div class="row g-4">
+
+      <div class="col-lg-7">
+        <div class="card border-0 shadow-sm mb-4">
+          <div class="card-body p-4">
+            <h2 class="h5 fw-bold mb-3"><i class="bi bi-geo-alt me-2 text-danger"></i>Endereço de entrega</h2>
+            @if (usuario) {
+              <p class="mb-1 fw-semibold">{{ usuario.nome }}</p>
+              <p class="mb-1 text-secondary small">{{ usuario.endereco }}</p>
+              <p class="mb-0 text-secondary small">{{ usuario.telefone }} · {{ usuario.email }}</p>
+            }
+          </div>
+        </div>
+
+        <div class="card border-0 shadow-sm">
+          <div class="card-body p-4">
+            <h2 class="h5 fw-bold mb-3"><i class="bi bi-credit-card me-2 text-danger"></i>Forma de pagamento</h2>
+
+            <div class="form-check border rounded p-3 mb-2 d-flex align-items-center">
+              <input class="form-check-input ms-0 me-3" type="radio" name="pagamento" id="pix" value="pix" [(ngModel)]="pagamento">
+              <label class="form-check-label w-100" for="pix">
+                <strong>Pix</strong>
+                <span class="badge text-bg-success ms-2">5% de desconto</span>
+                <br><small class="text-secondary">Aprovação imediata</small>
+              </label>
+            </div>
+
+            <div class="form-check border rounded p-3 mb-2 d-flex align-items-center">
+              <input class="form-check-input ms-0 me-3" type="radio" name="pagamento" id="cartao" value="cartao" [(ngModel)]="pagamento">
+              <label class="form-check-label w-100" for="cartao">
+                <strong>Cartão de crédito</strong>
+                <br><small class="text-secondary">Em até 10x sem juros</small>
+              </label>
+            </div>
+
+            <div class="form-check border rounded p-3 d-flex align-items-center">
+              <input class="form-check-input ms-0 me-3" type="radio" name="pagamento" id="boleto" value="boleto" [(ngModel)]="pagamento">
+              <label class="form-check-label w-100" for="boleto">
+                <strong>Boleto bancário</strong>
+                <br><small class="text-secondary">Vencimento em 3 dias úteis</small>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-5">
+        <div class="card border-0 shadow-sm">
+          <div class="card-body p-4">
+            <h2 class="h5 fw-bold mb-3">Resumo do pedido</h2>
+
+            <ul class="list-group list-group-flush mb-3">
+              @for (item of cesta.itens; track item.produto.codigo) {
+                <li class="list-group-item d-flex justify-content-between px-0">
+                  <span class="small">{{ item.quantidade }}x {{ item.produto.nome }}</span>
+                  <span class="small fw-semibold">R$ {{ cesta.subtotal(item) | number: '1.2-2' }}</span>
+                </li>
+              }
+            </ul>
+
+            <div class="d-flex justify-content-between small mb-1">
+              <span>Subtotal</span>
+              <span>R$ {{ cesta.total() | number: '1.2-2' }}</span>
+            </div>
+            <div class="d-flex justify-content-between small mb-1">
+              <span>Frete</span>
+              <span>R$ {{ frete | number: '1.2-2' }}</span>
+            </div>
+            @if (desconto() > 0) {
+              <div class="d-flex justify-content-between small mb-1 text-success">
+                <span>Desconto Pix (5%)</span>
+                <span>- R$ {{ desconto() | number: '1.2-2' }}</span>
+              </div>
+            }
+
+            <hr>
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="fw-bold">Total</span>
+              <span class="total">R$ {{ totalFinal() | number: '1.2-2' }}</span>
+            </div>
+
+            <div class="d-grid gap-2">
+              <button class="btn btn-danger btn-lg" (click)="confirmar()" [disabled]="cesta.vazia()">
+                Confirmar pedido
+              </button>
+              <a href="carrinho" class="btn btn-outline-secondary">Voltar para a cesta</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  } @else {
+
+    <div class="text-center py-5">
+      <i class="bi bi-check-circle-fill sucesso"></i>
+      <h1 class="fw-bold mt-3">Pedido realizado!</h1>
+      <p class="text-secondary">Obrigado pela compra, {{ usuario.nome }}. Seu pedido já está sendo preparado.</p>
+
+      <div class="card border-0 shadow-sm mx-auto mt-4 caixa-numero">
+        <div class="card-body p-4">
+          <small class="text-secondary">Número do pedido</small>
+          <div class="numero">#{{ numeroPedido }}</div>
+          <small class="text-secondary">Guarde esse número para acompanhar sua entrega.</small>
+        </div>
+      </div>
+
+      <div class="d-flex gap-2 justify-content-center mt-4">
+        <a href="/" class="btn btn-outline-secondary">Voltar para a loja</a>
+        <a href="meus-pedidos" class="btn btn-danger">Ver meus pedidos</a>
+      </div>
+    </div>
+
+  }
+</section>

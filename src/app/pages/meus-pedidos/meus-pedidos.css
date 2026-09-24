@@ -1,0 +1,16 @@
+.titulo { font-weight: 900; font-size: 1.8rem; }
+
+.accordion-button:not(.collapsed) {
+  background: #fff;
+  color: var(--pk-escuro);
+  box-shadow: none;
+}
+.accordion-button:focus { box-shadow: none; }
+
+.miniatura {
+  width: 42px;
+  height: 42px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #1c2130;
+}

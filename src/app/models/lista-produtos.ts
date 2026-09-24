@@ -2,7 +2,7 @@ import { Produto } from './produto';
 
 export const LISTA_PRODUTOS: Produto[] = [
   // ===== Poções e Saúde =====
-  { codigo: 1, nome: 'Poção', descritivo: 'Recupera 20 HP de um Pokémon. Essencial em qualquer mochila.', categoria: '', valor: 9.90, valorPromo: 7.90, quantidade: 80, destaque: 1 },
+    { codigo: 1, nome: 'Poção', descritivo: 'Recupera 20 HP de um Pokémon. Essencial em qualquer mochila.', categoria: 'Poções e Saúde', valor: 9.90, valorPromo: 7.90, quantidade: 80, destaque: 1 },
   { codigo: 2, nome: 'Super Poção', descritivo: 'Recupera 60 HP. Ideal para batalhas mais longas.', categoria: 'Poções e Saúde', valor: 17.90, valorPromo: 14.90, quantidade: 60, destaque: 0 },
   { codigo: 3, nome: 'Hiper Poção', descritivo: 'Recupera 120 HP de um Pokémon de uma só vez.', categoria: 'Poções e Saúde', valor: 29.90, valorPromo: 24.90, quantidade: 40, destaque: 0 },
   { codigo: 4, nome: 'Poção Máxima', descritivo: 'Restaura todo o HP de um Pokémon.', categoria: 'Poções e Saúde', valor: 44.90, valorPromo: 39.90, quantidade: 25, destaque: 1 },
@@ -13,8 +13,8 @@ export const LISTA_PRODUTOS: Produto[] = [
   { codigo: 5, nome: 'Cura Total', descritivo: 'Cura qualquer problema de status: veneno, sono, paralisia, queimadura e congelamento.', categoria: 'Poções e Saúde', valor: 19.90, valorPromo: 16.90, quantidade: 45, destaque: 1 },
   { codigo: 11, nome: 'Antiqueimadura', descritivo: 'Cura um Pokémon que sofreu queimadura.', categoria: 'Poções e Saúde', valor: 7.90, valorPromo: 5.90, quantidade: 90, destaque: 0 },
 
-  // ===== Pokébolas =====
     // ===== Pokébolas =====
+
   { codigo: 12, nome: 'Poké Bola', descritivo: 'A clássica. Perfeita para começar a sua coleção.', categoria: 'Pokébolas', valor: 29.90, valorPromo: 24.90, quantidade: 200, destaque: 0 },
   { codigo: 13, nome: 'Great Ball', descritivo: 'Taxa de captura maior que a Poké Bola comum.', categoria: 'Pokébolas', valor: 69.90, valorPromo: 59.90, quantidade: 120, destaque: 0 },
   { codigo: 14, nome: 'Ultra Ball', descritivo: 'A melhor bola vendida em lojas. Alta taxa de captura para Pokémon difíceis.', categoria: 'Pokébolas', valor: 149.90, valorPromo: 129.90, quantidade: 60, destaque: 1 },
@@ -27,6 +27,7 @@ export const LISTA_PRODUTOS: Produto[] = [
   { codigo: 21, nome: 'Heal Ball', descritivo: 'Restaura o HP e o status do Pokémon assim que ele é capturado.', categoria: 'Pokébolas', valor: 44.90, valorPromo: 39.90, quantidade: 55, destaque: 0 },
 
   // ===== Equipamentos =====
+
   { codigo: 22, nome: 'Mochila de Treinador', descritivo: 'Espaço para itens, pokébolas e tudo que a jornada pedir.', categoria: 'Equipamentos', valor: 119.90, valorPromo: 99.90, quantidade: 20, destaque: 1 },
   { codigo: 23, nome: 'Bicicleta', descritivo: 'Dobrável e resistente. Chegue mais rápido ao próximo ginásio.', categoria: 'Equipamentos', valor: 299.90, valorPromo: 259.90, quantidade: 5, destaque: 0 },
   { codigo: 24, nome: 'Vara Velha', descritivo: 'Vara de pesca simples para fisgar Pokémon aquáticos.', categoria: 'Equipamentos', valor: 29.90, valorPromo: 24.90, quantidade: 40, destaque: 0 },
@@ -39,18 +40,20 @@ export const LISTA_PRODUTOS: Produto[] = [
   { codigo: 31, nome: 'Pokédex', descritivo: 'Enciclopédia digital que registra cada Pokémon encontrado.', categoria: 'Equipamentos', valor: 199.90, valorPromo: 179.90, quantidade: 10, destaque: 1 },
 
   // ===== Acessórios =====
+
   { codigo: 32, nome: 'Boné de Treinador', descritivo: 'O acessório clássico de todo treinador.', categoria: 'Acessórios', valor: 49.90, valorPromo: 39.90, quantidade: 40, destaque: 0 },
-  { codigo: 33, nome: 'Restos', descritivo: 'Recupera um pouco de HP do Pokémon a cada turno.', categoria: 'Acessórios', valor: 39.90, valorPromo: 34.90, quantidade: 25, destaque: 1 },
-  { codigo: 34, nome: 'Faixa de Foco', descritivo: 'Garante que o Pokémon aguente um golpe que o derrubaria.', categoria: 'Acessórios', valor: 44.90, valorPromo: 39.90, quantidade: 20, destaque: 0 },
-  { codigo: 35, nome: 'Lenço de Seda', descritivo: 'Aumenta o poder dos golpes do tipo Normal.', categoria: 'Acessórios', valor: 24.90, valorPromo: 21.90, quantidade: 35, destaque: 0 },
-  { codigo: 36, nome: 'Faixa Escolhida', descritivo: 'Aumenta muito o Ataque, mas prende o Pokémon a um só golpe.', categoria: 'Acessórios', valor: 54.90, valorPromo: 47.90, quantidade: 15, destaque: 0 },
-  { codigo: 37, nome: 'Lenço Escolhido', descritivo: 'Aumenta muito a Velocidade, mas prende o Pokémon a um só golpe.', categoria: 'Acessórios', valor: 54.90, valorPromo: 47.90, quantidade: 15, destaque: 1 },
-  { codigo: 38, nome: 'Orbe da Vida', descritivo: 'Aumenta o poder dos golpes em troca de um pouco de HP.', categoria: 'Acessórios', valor: 59.90, valorPromo: 52.90, quantidade: 10, destaque: 0 },
+  { codigo: 33, nome: 'Amuleto da Sorte', descritivo: 'Moeda antiga que dobra o dinheiro ganho nas batalhas.', categoria: 'Acessórios', valor: 44.90, valorPromo: 39.90, quantidade: 25, destaque: 1 },
+  { codigo: 34, nome: 'Relógio de Treinador', descritivo: 'Relógio digital resistente com cronômetro, contador de passos e alerta de rotas.', categoria: 'Acessórios', valor: 89.90, valorPromo: 79.90, quantidade: 20, destaque: 0 },
+  { codigo: 35, nome: 'Cachecol de Treinador', descritivo: 'Cachecol resistente ao frio para jornadas em rotas nevadas.', categoria: 'Acessórios', valor: 54.90, valorPromo: 44.90, quantidade: 35, destaque: 0 },
+  { codigo: 36, nome: 'Luvas de Treinador', descritivo: 'Luvas sem dedos com aderência reforçada para escalar e pescar.', categoria: 'Acessórios', valor: 44.90, valorPromo: 37.90, quantidade: 30, destaque: 0 },
+  { codigo: 37, nome: 'Óculos de Sol', descritivo: 'Proteção contra o sol forte das rotas desérticas e praias.', categoria: 'Acessórios', valor: 64.90, valorPromo: 54.90, quantidade: 25, destaque: 1 },
+  { codigo: 38, nome: 'Cantil de Viagem', descritivo: 'Cantil térmico que mantém a água fresca por horas na estrada.', categoria: 'Acessórios', valor: 59.90, valorPromo: 52.90, quantidade: 10, destaque: 0 },
   { codigo: 39, nome: 'Incenso da Sorte', descritivo: 'Dobra o dinheiro ganho nas batalhas.', categoria: 'Acessórios', valor: 34.90, valorPromo: 29.90, quantidade: 30, destaque: 0 },
   { codigo: 40, nome: 'Incenso do Mar', descritivo: 'Aumenta o poder dos golpes do tipo Água.', categoria: 'Acessórios', valor: 29.90, valorPromo: 24.90, quantidade: 30, destaque: 0 },
-  { codigo: 41, nome: 'Pedra Eterna', descritivo: 'Impede que o Pokémon que a segura evolua.', categoria: 'Acessórios', valor: 19.90, valorPromo: 16.90, quantidade: 50, destaque: 0 },
-
+  { codigo: 41, nome: 'Lanterna de Caverna', descritivo: 'Lanterna compacta de longo alcance para explorar cavernas e rotas noturnas.', categoria: 'Acessórios', valor: 49.90, valorPromo: 39.90, quantidade: 45, destaque: 0 },
+  
   // ===== Alimentos =====
+
   { codigo: 42, nome: 'Fruta Oran', descritivo: 'Recupera 10 HP durante a batalha, automaticamente.', categoria: 'Alimentos', valor: 4.90, valorPromo: 3.90, quantidade: 150, destaque: 0 },
   { codigo: 43, nome: 'Fruta Sitrus', descritivo: 'Recupera HP automaticamente quando o Pokémon está fraco.', categoria: 'Alimentos', valor: 6.90, valorPromo: 5.50, quantidade: 120, destaque: 1 },
   { codigo: 44, nome: 'Fruta Lum', descritivo: 'Cura qualquer problema de status na hora.', categoria: 'Alimentos', valor: 8.90, valorPromo: 7.50, quantidade: 80, destaque: 0 },
@@ -64,6 +67,7 @@ export const LISTA_PRODUTOS: Produto[] = [
   { codigo: 52, nome: 'Bala Rara', descritivo: 'Doce raro que faz o Pokémon subir um nível.', categoria: 'Alimentos', valor: 49.90, valorPromo: 42.90, quantidade: 12, destaque: 1 },
 
   // ===== EvolutionStone =====
+  
   { codigo: 53, nome: 'Pedra do Fogo', descritivo: 'Faz certos Pokémon evoluírem, como Vulpix e Eevee.', categoria: 'EvolutionStone', valor: 39.90, valorPromo: 34.90, quantidade: 15, destaque: 1 },
   { codigo: 54, nome: 'Pedra da Água', descritivo: 'Desperta a evolução de Pokémon como Staryu e Eevee.', categoria: 'EvolutionStone', valor: 39.90, valorPromo: 34.90, quantidade: 15, destaque: 0 },
   { codigo: 55, nome: 'Pedra do Trovão', descritivo: 'Faz Pikachu, Eevee e outros evoluírem.', categoria: 'EvolutionStone', valor: 39.90, valorPromo: 34.90, quantidade: 18, destaque: 1 },
@@ -74,5 +78,5 @@ export const LISTA_PRODUTOS: Produto[] = [
   { codigo: 60, nome: 'Pedra do Crepúsculo', descritivo: 'Evolui Pokémon como Murkrow e Misdreavus.', categoria: 'EvolutionStone', valor: 49.90, valorPromo: 44.90, quantidade: 8, destaque: 0 },
   { codigo: 61, nome: 'Pedra da Alvorada', descritivo: 'Evolui Pokémon como Kirlia macho e Snorunt fêmea.', categoria: 'EvolutionStone', valor: 54.90, valorPromo: 49.90, quantidade: 6, destaque: 0 },
   { codigo: 62, nome: 'Pedra de Gelo', descritivo: 'Evolui Pokémon como Eevee e Vulpix de Alola.', categoria: 'EvolutionStone', valor: 49.90, valorPromo: 44.90, quantidade: 0, destaque: 0 },
-
+  { codigo: 63, nome: 'Pedra Eterna', descritivo: 'Pedra rara que impede a evolução do Pokémon que a carrega.', categoria: 'EvolutionStone', valor: 29.90, valorPromo: 24.90, quantidade: 50, destaque: 0 },
 ];

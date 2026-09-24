@@ -31,4 +31,9 @@ export class Destaques {
     this.cesta.adicionar(produto);
     this.mensagem = produto.nome + ' adicionado à cesta!';
   }
+
+  comprarAgora(produto: Produto) {
+    this.cesta.adicionar(produto);
+    window.location.href = 'carrinho';
+  }
 }

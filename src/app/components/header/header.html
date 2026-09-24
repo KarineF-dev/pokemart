@@ -5,30 +5,51 @@
         <span class="pokebola"></span>
         <span>
           <strong>Poké<span>Mart</span></strong>
-         <small class="d-none d-sm-block">Tudo para a sua próxima aventura!</small>
+          <small class="d-none d-sm-block">Tudo para a sua próxima aventura!</small>
         </span>
       </a>
 
       <form class="busca flex-grow-1 d-none d-md-flex" action="resultado-busca" method="get">
-  <input class="form-control" type="search" name="busca" [value]="buscaAtual()"
-         placeholder="Busque por produtos, poções, itens...">
-  <button class="btn btn-pk" type="submit"><i class="bi bi-search"></i></button>
-</form>
+        <input class="form-control" type="search" name="busca" [value]="buscaAtual()"
+               placeholder="Busque por produtos, poções, itens...">
+        <button class="btn btn-pk" type="submit"><i class="bi bi-search"></i></button>
+      </form>
 
-     <nav class="atalhos d-flex gap-3 ms-auto">
-  <a href="login">
-    <i class="bi bi-person"></i>
-    <span class="d-none d-lg-inline">Entrar<br><small>Minha conta</small></span>
-  </a>
-  <a href="#">
-    <i class="bi bi-heart"></i>
-    <span class="d-none d-lg-inline">Favoritos</span>
-  </a>
-  <a href="carrinho">
-    <i class="bi bi-cart3"></i>
-    <span class="d-none d-lg-inline">Carrinho</span>
-  </a>
-</nav>
+      <nav class="atalhos d-flex gap-3 ms-auto align-items-center">
+
+        @if (usuario == null) {
+          <a href="login">
+            <i class="bi bi-person"></i>
+            <span class="d-none d-lg-inline">Entrar<br><small>Minha conta</small></span>
+          </a>
+        } @else {
+          <div class="dropdown">
+            <a href="#" class="text-decoration-none" data-bs-toggle="dropdown">
+              <i class="bi bi-person-check"></i>
+              <span class="d-none d-lg-inline">Olá, {{ primeiroNome() }}<br><small>Minha conta</small></span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="meus-pedidos"><i class="bi bi-box-seam me-2"></i>Meus pedidos</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><button class="dropdown-item text-danger" (click)="sair()"><i class="bi bi-box-arrow-right me-2"></i>Sair</button></li>
+            </ul>
+          </div>
+        }
+
+        <a href="#">
+          <i class="bi bi-heart"></i>
+          <span class="d-none d-lg-inline">Favoritos</span>
+        </a>
+
+        <a href="carrinho" class="position-relative">
+          <i class="bi bi-cart3"></i>
+          <span class="d-none d-lg-inline">Carrinho</span>
+          @if (cesta.quantidadeTotal() > 0) {
+            <span class="badge rounded-pill text-bg-danger badge-carrinho">{{ cesta.quantidadeTotal() }}</span>
+          }
+        </a>
+
+      </nav>
     </div>
   </div>
 

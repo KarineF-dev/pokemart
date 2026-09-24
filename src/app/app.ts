@@ -9,4 +9,20 @@ import { Footer } from './components/footer/footer';
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App {}
+export class App {
+  constructor() {
+    let usuarios = JSON.parse(localStorage.getItem('usuarios') || '[]');
+
+    if (usuarios.length == 0) {
+      usuarios.push({
+        nome: 'Karine',
+        email: 'karine@pokemart.com',
+        senha: 'Teste@123',
+        documento: '000.000.000-00',
+        telefone: '(11) 90000-0000',
+        endereco: 'Rua das Pokébolas, 151, Pallet Town, São Paulo, SP'
+      });
+      localStorage.setItem('usuarios', JSON.stringify(usuarios));
+    }
+  }
+}

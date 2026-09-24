@@ -11,13 +11,12 @@ import { Cesta } from '../../models/cesta';
 export class Carrinho {
   cesta: Cesta = new Cesta();
 
-  finalizar() {
+    finalizar() {
     if (localStorage.getItem('usuarioLogado') == null) {
       alert('Faça login para finalizar o pedido.');
       window.location.href = 'login';
       return;
     }
-    alert('Pedido realizado com sucesso! Obrigado por comprar na PokéMart.');
-    this.cesta.limpar();
+    window.location.href = 'pedido';
   }
 }

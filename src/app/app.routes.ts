@@ -6,6 +6,10 @@ import { Vitrine } from './pages/vitrine/vitrine';
 import { Login } from './pages/login/login';
 import { Cadastro } from './pages/cadastro/cadastro';
 import { Carrinho } from './pages/carrinho/carrinho';
+import { Pedido } from './pages/pedido/pedido';
+import { MeusPedidos } from './pages/meus-pedidos/meus-pedidos';
+import { RecuperarSenha } from './pages/recuperar-senha/recuperar-senha';
+
 
 export const routes: Routes = [
   { path: '', component: Home },
@@ -15,5 +19,8 @@ export const routes: Routes = [
   { path: 'carrinho', component: Carrinho },
   { path: 'detalhe/:codigo', component: Detalhe },
   { path: 'resultado-busca', component: ResultaBusca },
+  { path: 'pedido', component: Pedido },
+  { path: 'meus-pedidos', component: MeusPedidos },
+  { path: 'recuperar-senha', component: RecuperarSenha },
   { path: '**', redirectTo: '' },
 ];

@@ -14,6 +14,11 @@ export class Login {
   mensagem = '';
   tentou = false;
 
+  constructor() {
+    this.email = 'karine@pokemart.com';
+    this.senha = 'Teste@123';
+  }
+
   entrar(formularioValido: boolean | null) {
     this.tentou = true;
 
@@ -22,17 +27,14 @@ export class Login {
       return;
     }
 
-    let usuarios = JSON.parse(localStorage.getItem('usuarios') || '[]');
+    localStorage.setItem('usuarioLogado', JSON.stringify({
+      nome: 'Karine',
+      email: this.email,
+      documento: '000.000.000-00',
+      telefone: '(11) 90000-0000',
+      endereco: 'Rua das Pokébolas, 151, Pallet Town, São Paulo, SP'
+    }));
 
-    for (let i = 0; i < usuarios.length; i++) {
-      if (usuarios[i].email == this.email && usuarios[i].senha == this.senha) {
-        localStorage.setItem('usuarioLogado', JSON.stringify(usuarios[i]));
-        alert('Bem-vindo, ' + usuarios[i].nome + '!');
-        window.location.href = '/';
-        return;
-      }
-    }
-
-    this.mensagem = 'E-mail ou senha incorretos.';
+    window.location.href = '/';
   }
 }
