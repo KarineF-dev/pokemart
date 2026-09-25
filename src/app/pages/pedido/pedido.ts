@@ -17,10 +17,13 @@ export class Pedido {
   concluido: boolean = false;
   numeroPedido: number = 0;
 
-  constructor() {
+   constructor() {
     this.usuario = JSON.parse(localStorage.getItem('usuarioLogado') || 'null');
-  }
 
+    if (this.usuario == null) {
+      window.location.href = 'login';
+    }
+  }
   desconto(): number {
     if (this.pagamento == 'pix') {
       return this.cesta.total() * 0.05;

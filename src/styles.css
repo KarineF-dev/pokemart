@@ -95,3 +95,4 @@ body {
 
 .btn-social { border: 1px solid rgba(255, 255, 255, .2); color: #fff; font-size: .9rem; }
 .btn-social:hover { background: rgba(255, 255, 255, .08); color: #fff; }
+body { background: #f5f7fb; }
