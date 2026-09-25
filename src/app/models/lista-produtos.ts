@@ -10,14 +10,14 @@ export const LISTA_PRODUTOS: Produto[] = [
   { codigo: 7, nome: 'Ice Heal', descritivo: 'Descongela um Pokémon que ficou congelado.', categoria: 'Poções e Saúde', valor: 8.90, valorPromo: 6.90, quantidade: 90, destaque: 0 },
   { codigo: 8, nome: 'Antídoto', descritivo: 'Cura um Pokémon envenenado.', categoria: 'Poções e Saúde', valor: 7.90, valorPromo: 5.90, quantidade: 100, destaque: 0 },
   { codigo: 9, nome: 'Anti-Paralisia', descritivo: 'Cura um Pokémon paralisado.', categoria: 'Poções e Saúde', valor: 7.90, valorPromo: 5.90, quantidade: 0, destaque: 0 },
-  { codigo: 5, nome: 'Cura Total', descritivo: 'Cura qualquer problema de status: veneno, sono, paralisia, queimadura e congelamento.', categoria: 'Poções e Saúde', valor: 19.90, valorPromo: 16.90, quantidade: 45, destaque: 1 },
+  { codigo: 5, nome: 'Cura Total', descritivo: 'Cura qualquer problema de status: veneno, sono, paralisia, queimadura e congelamento.', categoria: 'Poções e Saúde', valor: 19.90, valorPromo: 16.90, quantidade: 45, destaque: 0 },
   { codigo: 11, nome: 'Antiqueimadura', descritivo: 'Cura um Pokémon que sofreu queimadura.', categoria: 'Poções e Saúde', valor: 7.90, valorPromo: 5.90, quantidade: 90, destaque: 0 },
 
     // ===== Pokébolas =====
 
   { codigo: 12, nome: 'Poké Bola', descritivo: 'A clássica. Perfeita para começar a sua coleção.', categoria: 'Pokébolas', valor: 29.90, valorPromo: 24.90, quantidade: 200, destaque: 0 },
   { codigo: 13, nome: 'Great Ball', descritivo: 'Taxa de captura maior que a Poké Bola comum.', categoria: 'Pokébolas', valor: 69.90, valorPromo: 59.90, quantidade: 120, destaque: 0 },
-  { codigo: 14, nome: 'Ultra Ball', descritivo: 'A melhor bola vendida em lojas. Alta taxa de captura para Pokémon difíceis.', categoria: 'Pokébolas', valor: 149.90, valorPromo: 129.90, quantidade: 60, destaque: 1 },
+  { codigo: 14, nome: 'Ultra Ball', descritivo: 'A melhor bola vendida em lojas. Alta taxa de captura para Pokémon difíceis.', categoria: 'Pokébolas', valor: 149.90, valorPromo: 129.90, quantidade: 60, destaque: 0 },
   { codigo: 15, nome: 'Master Ball', descritivo: 'Captura qualquer Pokémon selvagem, sem falhar. Raríssima, produzida em quantidade limitada.', categoria: 'Pokébolas', valor: 4999.90, valorPromo: 4499.90, quantidade: 0, destaque: 1 },
   { codigo: 16, nome: 'Premier Ball', descritivo: 'Edição comemorativa, com o mesmo desempenho da Poké Bola.', categoria: 'Pokébolas', valor: 34.90, valorPromo: 29.90, quantidade: 60, destaque: 0 },
   { codigo: 17, nome: 'Luxury Ball', descritivo: 'Bola de luxo e confortável que faz o Pokémon ficar amigo mais rápido.', categoria: 'Pokébolas', valor: 299.90, valorPromo: 269.90, quantidade: 15, destaque: 0 },
@@ -41,7 +41,7 @@ export const LISTA_PRODUTOS: Produto[] = [
 
   // ===== Acessórios =====
 
-  { codigo: 32, nome: 'Boné de Treinador', descritivo: 'O acessório clássico de todo treinador.', categoria: 'Acessórios', valor: 49.90, valorPromo: 39.90, quantidade: 40, destaque: 0 },
+  { codigo: 32, nome: 'Boné de Treinador', descritivo: 'O acessório clássico de todo treinador.', categoria: 'Acessórios', valor: 49.90, valorPromo: 39.90, quantidade: 40, destaque: 1 },
   { codigo: 33, nome: 'Amuleto da Sorte', descritivo: 'Moeda antiga que dobra o dinheiro ganho nas batalhas.', categoria: 'Acessórios', valor: 44.90, valorPromo: 39.90, quantidade: 25, destaque: 1 },
   { codigo: 34, nome: 'Relógio de Treinador', descritivo: 'Relógio digital resistente com cronômetro, contador de passos e alerta de rotas.', categoria: 'Acessórios', valor: 89.90, valorPromo: 79.90, quantidade: 20, destaque: 0 },
   { codigo: 35, nome: 'Cachecol de Treinador', descritivo: 'Cachecol resistente ao frio para jornadas em rotas nevadas.', categoria: 'Acessórios', valor: 54.90, valorPromo: 44.90, quantidade: 35, destaque: 0 },
@@ -64,7 +64,7 @@ export const LISTA_PRODUTOS: Produto[] = [
   { codigo: 49, nome: 'Refrigerante', descritivo: 'Bebida gaseificada que recupera HP.', categoria: 'Alimentos', valor: 5.90, valorPromo: 4.50, quantidade: 150, destaque: 0 },
   { codigo: 50, nome: 'Limonada', descritivo: 'Limonada gelada que recupera bastante HP.', categoria: 'Alimentos', valor: 6.90, valorPromo: 5.50, quantidade: 120, destaque: 1 },
   { codigo: 51, nome: 'Leite Moomoo', descritivo: 'Leite nutritivo das Miltank. Recupera muito HP.', categoria: 'Alimentos', valor: 8.90, valorPromo: 7.50, quantidade: 60, destaque: 0 },
-  { codigo: 52, nome: 'Bala Rara', descritivo: 'Doce raro que faz o Pokémon subir um nível.', categoria: 'Alimentos', valor: 49.90, valorPromo: 42.90, quantidade: 12, destaque: 1 },
+  { codigo: 52, nome: 'Bala Rara', descritivo: 'Doce raro que faz o Pokémon subir um nível.', categoria: 'Alimentos', valor: 159.90, valorPromo: 42.90, quantidade: 12, destaque: 1 },
 
   // ===== EvolutionStone =====
 

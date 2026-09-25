@@ -40,7 +40,7 @@
                   <small class="text-muted text-decoration-line-through">R$ {{ obj.valor | number: '1.2-2' }}</small>
                   <div class="preco">R$ {{ obj.valorPromo | number: '1.2-2' }}</div>
 
-                  <div class="d-flex gap-2 mt-3">
+                  <div class="d-grid gap-2 mt-3">
                     @if (obj.quantidade > 0) {
                       <button class="btn btn-danger flex-fill" (click)="comprar(obj)">
                         <i class="bi bi-cart-plus me-1"></i>Adicionar
