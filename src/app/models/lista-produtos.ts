@@ -64,7 +64,7 @@ export const LISTA_PRODUTOS: Produto[] = [
   { codigo: 49, nome: 'Refrigerante', descritivo: 'Bebida gaseificada que recupera HP.', categoria: 'Alimentos', valor: 5.90, valorPromo: 4.50, quantidade: 150, destaque: 0 },
   { codigo: 50, nome: 'Limonada', descritivo: 'Limonada gelada que recupera bastante HP.', categoria: 'Alimentos', valor: 6.90, valorPromo: 5.50, quantidade: 120, destaque: 1 },
   { codigo: 51, nome: 'Leite Moomoo', descritivo: 'Leite nutritivo das Miltank. Recupera muito HP.', categoria: 'Alimentos', valor: 8.90, valorPromo: 7.50, quantidade: 60, destaque: 0 },
-  { codigo: 52, nome: 'Bala Rara', descritivo: 'Doce raro que faz o Pokémon subir um nível.', categoria: 'Alimentos', valor: 159.90, valorPromo: 42.90, quantidade: 12, destaque: 1 },
+  { codigo: 52, nome: 'Bala Rara', descritivo: 'Doce raro que faz o Pokémon subir um nível.', categoria: 'Alimentos', valor: 159.90, valorPromo: 112.90, quantidade: 12, destaque: 1 },
 
   // ===== EvolutionStone =====
 
